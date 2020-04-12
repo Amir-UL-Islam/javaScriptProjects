@@ -1,0 +1,89 @@
+@import url(../css/font.css);
+/*-----------Declearing the Variables --------------------*/
+:root {
+  --Open_Sans: "Open_Sans";
+  --Lexend_Deca: "Lexend_Deca";
+  --Josefin_Sans: "Josefin_Sans";
+}
+
+/*-------x---Declearing the Variables----------x-----------*/
+
+/*---------------Global--------------------*/
+h2 {
+  text-align: center;
+  margin: 20px 30px;
+}
+
+/*-------x--------Global-------------x-------*/
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background-color: #f9fafb;
+  font-family: var(--Open_Sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+.form {
+  padding: 30px 40px;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+}
+.form-control input:focus {
+  outline: none;
+  border-color: #777;
+}
+.form-control .success input {
+  border-color: #2ecc71;
+}
+.form-control .error input {
+  border-color: #e74c3c;
+}
+.form-control small {
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+.form-control .error small {
+  visibility: visible;
+}
+.form button {
+  cursor: pointer;
+  background-color: #07ac4c;
+  border: 2px solid #07ac4c;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+}
