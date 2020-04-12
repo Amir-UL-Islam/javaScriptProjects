@@ -3,7 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javaScripProjects</title>
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <form id="form" class="form">
+        <h2>Join With Us</h2>
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" />
+          <small>Error Massage</small>
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter Email" />
+          <small>Error Massage</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter Username" />
+          <small>Error Massage</small>
+        </div>
+        <div class="form-control">
+          <label for="password2">Confirm Password</label>
+          <input type="text" id="password2" placeholder="Confirm Password" />
+          <small>Error Massage</small>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>
