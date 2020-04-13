@@ -1,12 +1,4 @@
-@import url(../css/font.css);
-/*-----------Declearing the Variables --------------------*/
-:root {
-  --Open_Sans: "Open_Sans";
-  --Lexend_Deca: "Lexend_Deca";
-  --Josefin_Sans: "Josefin_Sans";
-}
-
-/*-------x---Declearing the Variables----------x-----------*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /*---------------Global--------------------*/
 h2 {
@@ -22,7 +14,7 @@ h2 {
 }
 body {
   background-color: #f9fafb;
-  font-family: var(--Open_Sans);
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,20 +52,19 @@ body {
   outline: none;
   border-color: #777;
 }
-.form-control .success input {
+.form-control.success input {
   border-color: #2ecc71;
 }
-.form-control .error input {
+.form-control.error input {
   border-color: #e74c3c;
 }
 .form-control small {
   color: #e74c3c;
   position: absolute;
-  top: 0;
   bottom: 0;
   visibility: hidden;
 }
-.form-control .error small {
+.form-control.error small {
   visibility: visible;
 }
 .form button {
