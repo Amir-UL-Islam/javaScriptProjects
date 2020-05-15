@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 const email = document.getElementById('email');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const confirm_password = document.getElementById('confirm_password');
 
 //-------------------show input error massage
 
@@ -74,9 +74,10 @@ function getFileName(input) {
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  checkRequired([username, email, password, password2]);
+  checkRequired([username, email, password, confirm_password]);
   checkLength(username, 3, 15);
   checkLength(password, 7, 15);
+  checkLength(confirm_password, 7, 15);
   checkEmail(email);
-  checkPasswordsMatch(password, password2);
+  checkPasswordsMatch(password, confirm_password);
 });

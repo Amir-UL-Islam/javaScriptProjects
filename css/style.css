@@ -12,6 +12,7 @@ h2 {
   box-sizing: border-box;
   overflow: hidden;
 }
+
 body {
   background-color: #f9fafb;
   font-family: 'Open Sans', sans-serif;
@@ -21,25 +22,30 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
 .container {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
   width: 400px;
 }
+
 .form {
   padding: 30px 40px;
 }
+
 .form-control {
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
 }
+
 .form-control label {
   color: #777;
   display: block;
   margin-bottom: 5px;
 }
+
 .form-control input {
   border: 2px solid #f0f0f0;
   display: block;
@@ -48,25 +54,31 @@ body {
   padding: 10px;
   font-size: 14px;
 }
+
 .form-control input:focus {
   outline: none;
   border-color: #777;
 }
+
 .form-control.success input {
   border-color: #2ecc71;
 }
+
 .form-control.error input {
   border-color: #e74c3c;
 }
+
 .form-control small {
   color: #e74c3c;
   position: absolute;
   bottom: 0;
   visibility: hidden;
 }
+
 .form-control.error small {
   visibility: visible;
 }
+
 .form button {
   cursor: pointer;
   background-color: #07ac4c;
