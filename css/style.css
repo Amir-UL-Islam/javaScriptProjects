@@ -48,10 +48,19 @@ h2 {
 h3 {
     border-bottom: 2px solid #111;
     display: flex;
-    padding-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
     justify-content: space-between;
     font-weight: bold;
     margin: 0 0 20px;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 10px;
+
 }
 
 .container {
