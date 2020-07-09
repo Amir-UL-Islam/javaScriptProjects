@@ -16,7 +16,7 @@ async function getRandonUser() {
     const user = data.results[0];
     const newUser = {
         name: `${user.name.first} ${user.name.last}`,
-        money: Math.floor(Math.random() * 1000000000)
+        money: Math.floor(Math.random() * 1000000)
     };
     addData(newUser);
 }
@@ -29,6 +29,20 @@ function addData(object) {
 function updateDOM(providedData = data) {
     //-- Clear the Main Div
     main.innerHTML = ' <h2><strong>Person</strong>Wealth</h2> ';
-    providedData.forEach();
+    providedData.forEach(item => {
+        const element = document.createElement("div");
+        element.classList.add("person");
+        element.innerHTML = `<straon>${item.name}</straon>${formatMoney(item.money)}`;
+        main.appendChild(element);
+
+    });
 
 }
+// format Money 
+function formatMoney(number) {
+    return '$' + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
+
+// Event Listener
+
+addUser.addEventListener('click', getRandonUser);
