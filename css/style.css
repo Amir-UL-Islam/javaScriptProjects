@@ -54,6 +54,8 @@ body {
   border-radius: 30%;
   color: var(--mainWhite);
 }
+/* navbar end */
+
 /* hero */
 .hero {
   min-height: calc(100vh - 60px);
@@ -89,6 +91,8 @@ body {
   background: transparent;
   color: var(--primaryColor);
 }
+/* hero end */
+
 /* products */
 .products {
   padding: 4rem 0;
@@ -160,6 +164,8 @@ body {
   color: var(--primaryColor);
   text-align: center;
 }
+/* products end */
+
 /*  main cart */
 .cart-overlay {
   position: fixed;
@@ -208,6 +214,8 @@ body {
   letter-spacing: var(--mainSpacing);
   margin-bottom: 2rem;
 }
+/*  main cart  end*/
+
 /* Cart Item */
 .cart-item {
   display: grid;
@@ -241,7 +249,10 @@ body {
   color: var(--primaryColor);
   cursor: pointer;
 }
-/* Cart Item */
+
+/* Cart Item  end*/
+
+/* Cart Item footer */
 
 .cart-footer {
   margin-top: 2rem;
@@ -252,3 +263,5 @@ body {
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
+
+/* Cart Item footer end*/
