@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javaScripProjects</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>javaScripProjects</title>
+</head>
+
+<body>
+  <button id="settings-btn" class="settings-btn">
+    <i class="fas fa-cog"></i>
+  </button>
+  <div class="settings" id="settings">
+    <label for="difficulties">Difficulty &MediumSpace;</label>
+    <select name="" id="difficulties">
+      <option value="Easy">Easy</option>
+      <option value="Hard">Hard</option>
+      <option value="Expart">Expart</option>
+    </select>
+  </div>
+  <div class="container">
+    <h2>Type Like A Pro</h2>
+    <small>Type the Followings As Fast As You Can</small>
+    <h1 id="word">Test</h1>
+    <input type="text" placeholder="Type Here" autocomplete="off">
+    <p class="time-container">
+      Time Left: <samp id="time">10s</samp>
+    </p>
+    <p class="score-container">
+      Current Score: <samp id="score">0</samp>
+    </p>
+    <div class="end-game" id="end-game"></div>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+
 </html>

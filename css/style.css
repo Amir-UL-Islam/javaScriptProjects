@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(37, 63, 63);
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5% 0.8%;
+    font-size: 14px;
+}
+.settings-btn{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+.settings{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: aliceblue;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    height: 50px;
+}
+.settings-hide{
+    transform: translateY(-100);
+}
+select{
+    width: 100px;
+    background-color: rgb(156, 222, 224);
+    border-radius: 3px;
+    padding: 1px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select:focus, button:focus{
+    outline: none;
+}
+.container{
+    background-color: rgb(19, 102, 105);
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    text-align: center;
+    padding:40px;
+    color: aliceblue;
+    box-shadow: 0 3px 5px rgb(0, 0, 0, 0.5);
+    height: 300px;
+}
+h2{
+    background-color: rgb(37, 63, 63);
+    margin: 0 0 35px;
+    padding: 8px;
+    border-radius: 5px;
+}
+h1{
+    margin: 0;
+}
+input{
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 8px;
+    width: 250px;
+}
+.time-container{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+
+}
+.score-container{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+.end-game{
+    background-color: inherit;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
