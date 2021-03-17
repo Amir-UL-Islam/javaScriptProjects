@@ -29,10 +29,8 @@ class Products {
       products = products.map((item) => {
         const { title, price } = item.fields;
         const { id } = item.sys;
-        const  idc  = item.sys;
-
-        const  image  = item.fields.image.fields.file.url;
-        return {  idc,title, price, id, image };
+        const image = item.fields.image.fields.file.url;
+        return { title, price, id, image };
       });
       return products;
     } catch (error) {
@@ -48,7 +46,7 @@ class UI {
   }
 }
 // local storage
-class Storage {}
+class Storage { }
 
 document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
