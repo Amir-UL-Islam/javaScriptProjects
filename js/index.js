@@ -1,11 +1,15 @@
-const navbarBtn = document.getElementById('btn');
-const signUp = document.getElementById('open');
+// DOM for filter
 const filter = document.getElementById('filter');
 const postContainer = document.getElementById('posts-container');
 const loader = document.querySelector('.loader');
 
+// DOM for Menu
+const toggle = document.getElementById('btn-toggle');
+const open = document.getElementById('open');
+const close = document.getElementById('close-btn');
+const modal = document.getElementById('modal');
 
-
+// setting the value 
 let limit = 3;
 let page = 1;
 
@@ -40,6 +44,7 @@ async function showPost() {
         postContainer.appendChild(postElement)
     });
 }
+
 // Showing Post and Fatching
 function showLoading() {
     loader.classList.add('show')
@@ -51,6 +56,7 @@ function showLoading() {
         showPost();
     }, 300);
 }
+
 // Showing initial post begins 
 showPost();
 
@@ -60,6 +66,7 @@ window.addEventListener('scroll', () => {
         showLoading();
     }
 })
+
 // filtering the post
 function filterPost(e) {
     const term = e.target.value.toUpperCase();
@@ -75,3 +82,16 @@ function filterPost(e) {
     })
 }
 filter.addEventListener('input', filterPost);
+
+// Menu Section
+// show the Menu section
+toggle.addEventListener('click', () => document.body.classList.toggle('show-nav'));
+
+// show the Modal section
+open.addEventListener('click', () => modal.classList.add('show-modal'));
+
+// close the Modal section
+close.addEventListener('click', () => modal.classList.remove('show-modal'));
+
+// closing the Modal by clicking any place
+window.addEventListener('click', e => e.target == modal ? modal.classList.remove('show-modal') : false);
