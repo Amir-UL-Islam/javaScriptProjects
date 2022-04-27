@@ -1,9 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javaScripProjects</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinite Scroll</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- nav bar -->
+  <nav>
+    <div class="logo">
+      <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user" srcset="">
+    </div>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Blog</li>
+      <li>Shop</li>
+      <li>Connect</li>
+    </ul>
+  </nav>
+  <!-- nav bar       -->
+  <!-- header -->
+  <header>
+    <button id="btn-toggle" class="toggle">
+      <i class="fa fa-bars fa-2x"></i>
+    </button>
+    <h1>Any</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, officiis!</p>
+    <button class="signUp" id="open">Sign Up</button>
+  </header>
+  <!-- header      -->
+  <div class="container">
+    <h1>My Blogs</h1>
+    <div class="filter-container">
+      <input type="text" id="filter" class="filter" placeholder="Filter Posts...">
+    </div>
+    <div class="post-container" id="posts-container">
+      <!-- <div class="post">
+        <div class="number">
+          1
+        </div>
+        <div class="post-info">
+          <h2 class="post-title">Post One</h2>
+          <p class="post-body">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, dolores commodi. Illo sed cupiditate iusto
+            dolore labore eveniet provident consectetur animi ducimus. Corporis, ducimus enim! Iusto expedita voluptate
+            quo doloribus?
+          </p>
+        </div>
+      </div>
+      <div class="post">
+        <div class="number">
+          2
+        </div>
+        <div class="post-info">
+          <h2 class="post-title">Post Two</h2>
+          <p class="post-body">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, dolores commodi. Illo sed cupiditate iusto
+            dolore labore eveniet provident consectetur animi ducimus. Corporis, ducimus enim! Iusto expedita voluptate
+            quo doloribus?
+          </p>
+        </div>
+      </div>
+      <div class="post">
+        <div class="number">
+          3
+        </div>
+        <div class="post-info">
+          <h2 class="post-title">Post Three</h2>
+          <p class="post-body">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, dolores commodi. Illo sed cupiditate iusto
+            dolore labore eveniet provident consectetur animi ducimus. Corporis, ducimus enim! Iusto expedita voluptate
+            quo doloribus?
+          </p>
+        </div>
+      </div> -->
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close-btn"><i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="modal-content">
+          <p>Register with us.</p>
+          <form action="" class="modal-form">
+            <div>
+              <label for="name">Name</label>
+              <input class="input" type="text" id="name" placeholder="Enter Name">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input class="input" type="text" id="email" placeholder="Enter Email">
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input class="input" type="password" id="password" placeholder="Enter Password">
+              <div>
+                <label for="cPassword">Confirm Password</label>
+                <input class="input" type="password" id="cPassword" placeholder="Enter Password Again">
+              </div>
+            </div>
+            <input type="submit" value="Submit" class="submit-btn">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- loader -->
+  <div class="loader">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <!-- loader     -->
+  <script src="./js/index.js"></script>
+</body>
+
 </html>

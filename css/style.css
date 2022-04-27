@@ -1,0 +1,264 @@
+:root {
+    --modal-duration: 1s;
+    --primary-color: #b4002a;
+    --secondary-color: #0e1b90;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+
+}
+body.show-nav{
+    transform: translateX(25%);
+}
+/* nav bar */
+nav{
+    background-color: var(--primary-color);
+    border-right: 2px solid rgba(200, 200, 200, 0.2);
+    color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height:100vh;
+    z-index: 101;
+    transform: translateX(-100%);
+}   
+nav .logo{
+    padding: 15%;
+    text-align: center;
+}
+nav .logo img{
+    width: 70%;
+    height: 70%;
+    border-radius: 70%;
+}
+nav ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+nav ul li{
+    border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+    padding: 15px;
+}
+nav ul li:first-of-type{
+    border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+nav ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* nav bar     */
+/* header */
+header{
+    background-color: var(--primary-color);
+    color: aliceblue;
+    position: relative;
+    font-size: 130%;
+    padding: 40px 15px;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+}
+header p{
+    margin: 30px 0;
+}
+button, input[type='submit']{
+    background-color: var(--primary-color);
+    border-radius: 5%;
+    border: 0px;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+button:focus{
+    outline: none;
+}
+.toggle{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.signUp{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.container{
+    padding: 15px;
+    max-width: 100%;
+    width: 850px;
+    margin: 0 auto;
+}
+.container h1{
+    margin: 0px;
+    text-align: center;
+}
+.filter-container{
+    margin-top: 20px;
+    text-align: center;
+}
+.filter{
+    width: 70%;
+    padding: 10px;
+    border-radius: 5%;
+}
+.filter:focus{
+    outline:none;
+}
+.post{
+    position: relative;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 40px 0;
+    display: flex;
+}
+.post .post-title{
+    margin: 0px;
+    color: #fff;
+}
+.post .post-body{
+    margin: 15px 0 0;
+    line-height: 1.3;
+    color: #fff;
+}
+.post .post-info{
+    margin: 20px;
+}
+.post .number{
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color:var(--primary-color);
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.modal{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    height: 500px;
+    width: 350px;
+    animation: modalopen;
+    animation-duration: 0.7s; 
+}
+.modal-header{
+    background-color:var(--primary-color);
+    padding: 15px;
+    color: #fff;
+}
+.modal-header h3{
+    margin: 0px;
+}
+.modal-content{
+    padding: 20px;
+}
+.modal-container.show-modal{
+    display: block;
+    opacity: 1;
+}
+.modal-form div{
+    margin: 15px 0px;
+}
+.modal-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+.modal-form .input{
+    width: 100%;
+    padding: 8px;
+}
+.modal .close-btn{
+    background: transparent;
+    color:#fff;
+    position: absolute;
+    font-size: 25px;
+    top: 2%;
+    right: 2%;
+}
+.modal .submit-btn{
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 5px;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    padding: 2.5%;
+}
+.loader{
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transition: opacity 0.3s ease-in;
+}
+.loader.show{
+    opacity: 1;
+}
+.circle{
+    background-color:var(--primary-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 1.5px;
+    animation: bounce 0.5s ease-in infinite;
+}
+.circle:nth-of-type(2){
+    animation-delay: 0.1s;
+}
+.circle:nth-of-type(3){
+    animation-delay: 0.2s;
+}
+@keyframes bounce{
+    0%,
+    100%{
+        transform: translatey(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+@keyframes modalopen{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
